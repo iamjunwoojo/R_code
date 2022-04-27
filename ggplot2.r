@@ -81,3 +81,12 @@ ggplot(mtcars,aes(gear,fill=fcyl))+
   geom_bar(position='dodge')+
   labs(x='gear',y='fcyl')+
   scale_fill_manual('fcyl 명단',values=c('yellow','green','blue'))
+
+#zitter 이용해서 radom 하게 조금씩 변화시키고 y축 숫자로 지정
+
+ggplot(mtcars, aes(mpg,0)) +
+  geom_point(position = "jitter")
+
+#zitter하고 y축 경계지정
+  +ylim(c(-2, 2))
+#
