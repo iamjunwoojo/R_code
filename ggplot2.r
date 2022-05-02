@@ -89,4 +89,8 @@ ggplot(mtcars, aes(mpg,0)) +
 
 #zitter하고 y축 경계지정
   +ylim(c(-2, 2))
-#
+
+
+#zitter 하고 zitter 범위 지정 geom_jitter = position jitter +geom_point
+plt_mpg_vs_fcyl_by_fam + geom_point()
+plt_mpg_vs_fcyl_by_fam + geom_point(position = position_jitter(width = 0.1))
